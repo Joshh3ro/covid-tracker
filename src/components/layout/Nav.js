@@ -8,14 +8,14 @@ export class Nav extends Component {
             <header>
                 <nav className="Link">
                     <ul className="nav_links" >
-                        <Link  to="/about">
+                        <Link  to="/">
                             <li>About</li>
                         </Link>
-                        <Link to="/projects">
-                            <li>Projects</li>
+                        <Link to="/tracker">
+                            <li>Tracker</li>
                         </Link>
-                        <Link to="/schedule">
-                            <li>Schedule</li>
+                        <Link to="/project">
+                            <li>Project Info</li>
                         </Link>
                     </ul>
                 </nav>
