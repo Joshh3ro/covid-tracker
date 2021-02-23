@@ -13,6 +13,7 @@ export class Tracker extends Component {
 
     componentDidMount() {
         this.getData();
+        console.log("nice looking out headass, the api keeps failing try a new rout")
     }
 
     async getData() {
@@ -29,17 +30,17 @@ export class Tracker extends Component {
             <div className="position-relative Information">
                 <div className="row justify-content-center">
                     <div className=" col-5 card__catagory text-center text-white">
-                        <lable>New Cases</lable>
+                        <lable className="card__header">Daily Cases</lable>
                         <p>{}####</p>
                     </div>
     
                     <div className=" col-5 card__catagory text-center text-white">
-                        <lable>Total Cases</lable>
+                        <lable className="card__header">Total Cases</lable>
                         <p>{this.state.confirmed}</p>
                     </div>
     
                     <div className=" col-10 card__catagory text-center text-white">
-                        <lable>Recoveries</lable>
+                        <lable className="card__header">Recoveries</lable>
                         <p>{this.state.recovered}</p>
                     </div>
                 </div>

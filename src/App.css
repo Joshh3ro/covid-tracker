@@ -19,11 +19,16 @@
 .card__catagory {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 52px;
   margin: 2px;
   border-radius: 10px;
   background-color: #D8DEE9;
   height: 300px;
+  padding-top: 6%;
+}
+
+.card__header {
+  font-weight: 700;
+  font-size: 52px;
 }
 
 .about__cta {
