@@ -1,8 +1,28 @@
 import React, { useState, useEffect, Component } from 'react'
 import '../../App.css';
+import Axios from "axios";
 
 
 export class Tracker extends Component {
+
+    state = {
+        confirmed: 0,
+        recovered: 0,
+        deaths: 0,
+    }
+
+    componentDidMount() {
+        this.getData();
+    }
+
+    async getData() {
+        const res = await Axios("https://covid19.mathdro.id/api");
+        this.setState({
+            confirmed: res.data.confirmed.value,
+            recovered: res.data.recovered.value,
+            deaths: res.data.deaths.value,
+        });
+    }
 
     render() {
         return (
@@ -15,12 +35,12 @@ export class Tracker extends Component {
     
                     <div className=" col-5 card__catagory text-center text-white">
                         <lable>Total Cases</lable>
-                        <p>{}####</p>
+                        <p>{this.state.confirmed}</p>
                     </div>
     
                     <div className=" col-10 card__catagory text-center text-white">
                         <lable>Recoveries</lable>
-                        <p>{}####</p>
+                        <p>{this.state.recovered}</p>
                     </div>
                 </div>
             </div>
