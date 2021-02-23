@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //Layout
 import Nav from './components/layout/Nav';
@@ -14,15 +14,21 @@ import NoMatch from './components/pages/Error';
 
 function App() {
   return (
-  <Router>
-    <div className="App">
-      <Nav />
-      <Route path="/" exact component={ About } />
-      <Route path="/project" component={ Project } />
-      <Route path="/tracker" component={ Tracker } />
-      <Route path="*" component={ NoMatch } />
-    </div>
-  </Router>
+  
+  
+    <Router>
+      
+        <div className="App">
+          <Nav />
+          <Switch>
+          <Route exact path="/" component={ About } />
+          <Route path="/project" component={ Project } />
+          <Route path="/tracker" component={ Tracker } />
+          <Route path="*" component={ NoMatch } />
+          </Switch>
+        </div>
+      
+    </Router>
   );
 }
 

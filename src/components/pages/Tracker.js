@@ -30,18 +30,18 @@ export class Tracker extends Component {
             <div className="position-relative Information">
                 <div className="row justify-content-center">
                     <div className=" col-5 card__catagory text-center text-white">
-                        <lable className="card__header">Daily Cases</lable>
-                        <p>{}####</p>
+                        <lable className="card__header">Confirmed Cases</lable>
+                        <p className="card__info">{this.state.confirmed}</p>
                     </div>
     
                     <div className=" col-5 card__catagory text-center text-white">
-                        <lable className="card__header">Total Cases</lable>
-                        <p>{this.state.confirmed}</p>
+                        <lable className="card__header">Total Deaths</lable>
+                        <p className="card__info">{this.state.deaths}</p>
                     </div>
     
                     <div className=" col-10 card__catagory text-center text-white">
                         <lable className="card__header">Recoveries</lable>
-                        <p>{this.state.recovered}</p>
+                        <p className="card__info">{this.state.recovered}</p>
                     </div>
                 </div>
             </div>
